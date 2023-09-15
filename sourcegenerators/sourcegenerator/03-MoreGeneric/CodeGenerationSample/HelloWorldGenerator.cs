@@ -10,20 +10,16 @@ public class HelloWorldGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
-        context.RegisterPostInitializationOutput(ctx =>
-        {
-            ctx.AddSource("HelloWorld.g.cs", SourceText.From(helloWorld, Encoding.UTF8));
-        });
+        context.RegisterPostInitializationOutput(ctx => 
+            ctx.AddSource("HelloWorld.g.cs", SourceText.From(helloWorld, Encoding.UTF8)));
 
-        var pathCollectionProvider = context.CompilationProvider.Select(static (compilation, _) =>
-        {
-            return compilation.SyntaxTrees.Select(tree => tree.FilePath).ToArray();
-        });
+        var pathCollectionProvider = context.CompilationProvider.Select(
+            static (compilation, _) => 
+                compilation.SyntaxTrees.Select(tree => tree.FilePath).ToArray());
 
-        context.RegisterSourceOutput(pathCollectionProvider, (spc, content) =>
-        {
-            spc.AddSource("HelloWorld2.g.cs", SourceText.From(GetHelloWorld2(content), Encoding.UTF8));
-        });
+        context.RegisterSourceOutput(pathCollectionProvider, (
+            spc, content) => 
+                spc.AddSource("HelloWorld2.g.cs", SourceText.From(GetHelloWorld2(content), Encoding.UTF8)));
     }
 
     private const string helloWorld = """

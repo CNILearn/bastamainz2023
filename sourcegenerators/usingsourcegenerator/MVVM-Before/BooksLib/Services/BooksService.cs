@@ -4,7 +4,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 using GenericViewModels.Services;
 
-
 using System.Collections.ObjectModel;
 
 namespace BooksLib.Services;

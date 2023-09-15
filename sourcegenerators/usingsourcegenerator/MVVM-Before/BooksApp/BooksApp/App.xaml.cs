@@ -1,8 +1,5 @@
-﻿
-// To learn more about WinUI, the WinUI project structure,
+﻿// To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
-
-using CommunityToolkit.Mvvm.DependencyInjection;
 
 namespace BooksApp;
 
@@ -17,7 +14,7 @@ public partial class App : Application
     /// </summary>
     public App()
     {
-        this.InitializeComponent();
+        InitializeComponent();
     }
 
     /// <summary>

@@ -40,7 +40,7 @@ public class EquatableGenerator : IIncrementalGenerator
     private static ClassDeclarationSyntax? GetSemanticTargetForGeneration(GeneratorSyntaxContext context)
     {
         // we know the node is a ClassDeclarationSyntax thanks to IsSyntaxTargetForGeneration
-        ClassDeclarationSyntax? classDeclarationSyntax = (ClassDeclarationSyntax)context.Node;
+        var classDeclarationSyntax = (ClassDeclarationSyntax)context.Node;
 
         // loop through all the attributes on the method
         foreach (AttributeListSyntax attributeListSyntax in classDeclarationSyntax.AttributeLists)
@@ -50,7 +50,8 @@ public class EquatableGenerator : IIncrementalGenerator
                 SymbolInfo symbolInfo = context.SemanticModel.GetSymbolInfo(attributeSyntax);
 
                 ISymbol? attributeSymbol = symbolInfo.Symbol ?? symbolInfo.CandidateSymbols.FirstOrDefault();
-                if (attributeSymbol is null) continue;
+                if (attributeSymbol is null) 
+                    continue;
 
                 INamedTypeSymbol attributeContainingTypeSymbol = attributeSymbol.ContainingType;
                 string fullName = attributeContainingTypeSymbol.ToDisplayString();
@@ -91,7 +92,7 @@ public class EquatableGenerator : IIncrementalGenerator
     static List<ClassToGenerateInfo> GetTypesToGenerate(Compilation compilation, IEnumerable<ClassDeclarationSyntax> classes, CancellationToken ct)
     {
         // Create a list to hold the output
-        List<ClassToGenerateInfo> classesToGenerate = new();
+        List<ClassToGenerateInfo> classesToGenerate = [];
 
         // Get the semantic representation of our marker attribute 
         INamedTypeSymbol? attributeSymbol = compilation.GetTypeByMetadataName("CodeGenerationSample.ImplementEquatableAttribute");

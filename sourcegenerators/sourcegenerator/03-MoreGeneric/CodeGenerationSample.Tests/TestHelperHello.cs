@@ -8,10 +8,9 @@ internal class TestHelperHello
         SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(source);
 
         // Create a Roslyn compilation for the syntax tree.
-        CSharpCompilation compilation = CSharpCompilation.Create(
+        var compilation = CSharpCompilation.Create(
             assemblyName: "Tests",
             syntaxTrees: new[] { syntaxTree });
-
 
         // Create an instance of our EnumGenerator incremental source generator
         HelloWorldGenerator generator = new();

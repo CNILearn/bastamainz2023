@@ -14,7 +14,7 @@ public sealed partial class BookItemUserControl : UserControl
 {
     public BookItemUserControl()
     {
-        this.InitializeComponent();
+        InitializeComponent();
     }
 
     public BookItemViewModel BookItemViewModel
@@ -30,7 +30,7 @@ public sealed partial class BookItemUserControl : UserControl
     {
         base.OnPointerEntered(e);
 
-        if (e.Pointer.PointerDeviceType == PointerDeviceType.Mouse || e.Pointer.PointerDeviceType == PointerDeviceType.Pen)
+        if (e.Pointer.PointerDeviceType is PointerDeviceType.Mouse or PointerDeviceType.Pen)
         {
             VisualStateManager.GoToState(this, "HoverButtonsShown", true);
         }

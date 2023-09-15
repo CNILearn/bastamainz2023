@@ -32,7 +32,7 @@ public abstract class MasterDetailViewModel<TItemViewModel, TItem> : ViewModelBa
 
     protected abstract TItemViewModel ToViewModel(TItem item);
 
-    public virtual IEnumerable<TItemViewModel> ItemsViewModels => Items.Select(item => ToViewModel(item));
+    public virtual IEnumerable<TItemViewModel> ItemsViewModels => Items.Select(ToViewModel);
 
     protected TItem? _selectedItem;
     public virtual TItem? SelectedItem
