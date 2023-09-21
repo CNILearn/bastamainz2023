@@ -7,7 +7,7 @@ public class WinUIDialogService : IDialogService
     public async Task ShowMessageAsync(string message)
     {
         MessageDialog dlg = new(message);
-        var hwnd = GetActiveWindow();
+        nint hwnd = GetActiveWindow();
         if (hwnd == IntPtr.Zero)
         {
             throw new InvalidOperationException();

@@ -23,10 +23,8 @@ public class BookDetailViewModel : EditableItemViewModel<Book>
         _dialogService = dialogService ?? throw new ArgumentNullException(nameof(dialogService));
         _logger = logger;
 
-        itemsService.SelectedItemChanged += (sender, book) =>
-        {
+        itemsService.SelectedItemChanged += (sender, book) => 
             Item = book;
-        };
     }
 
     protected override void OnAdd()
@@ -45,7 +43,8 @@ public class BookDetailViewModel : EditableItemViewModel<Book>
     {
         try
         {
-            if (EditItem is null) throw new InvalidOperationException();
+            if (EditItem is null) 
+                throw new InvalidOperationException();
 
             await _itemsService.AddOrUpdateAsync(EditItem);
         }

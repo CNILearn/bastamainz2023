@@ -19,9 +19,7 @@ public class WinUINavigationService : ObservableObject, INavigationService, IRec
         get => _useNavigation;
         set => SetProperty(ref _useNavigation, value);
     }
-
-    private string _currentPage = string.Empty;
-    public string CurrentPage => _currentPage;
+    public string CurrentPage { get; private set; } = string.Empty;
 
     private Frame? _frame;
     private Frame Frame => _frame ??= _initializeNavigation.Frame;
@@ -34,7 +32,7 @@ public class WinUINavigationService : ObservableObject, INavigationService, IRec
         PageStackEntry stackEntry = Frame.BackStack.Last();
         Type backPageType = stackEntry.SourcePageType;
         var pageEntry = Pages.FirstOrDefault(pair => pair.Value == backPageType);
-        _currentPage = pageEntry.Key;
+        CurrentPage = pageEntry.Key;
 
         Frame.GoBack();
         return Task.CompletedTask;
@@ -42,7 +40,7 @@ public class WinUINavigationService : ObservableObject, INavigationService, IRec
 
     public Task NavigateToAsync(string pageName)
     {
-        _currentPage = pageName;
+        CurrentPage = pageName;
         Frame.Navigate(Pages[pageName]);
         return Task.CompletedTask;
     }

@@ -1,6 +1,6 @@
 ﻿namespace BooksApp.ViewModels;
 
-public class MainWindowViewModel : ViewModelBase
+public class MainWindowViewModel(INavigationService navigationService, WinUIInitializeNavigationService initializeNavigationService) : ViewModelBase
 {
     private readonly Dictionary<string, Type> _pages = new()
     {
@@ -8,13 +8,8 @@ public class MainWindowViewModel : ViewModelBase
         [PageNames.BookDetailPage] = typeof(BookDetailPage)
     };
 
-    private readonly INavigationService _navigationService;
-    private readonly WinUIInitializeNavigationService _initializeNavigationService;
-    public MainWindowViewModel(INavigationService navigationService, WinUIInitializeNavigationService initializeNavigationService)
-    {
-        _navigationService = navigationService;
-        _initializeNavigationService = initializeNavigationService;
-    }
+    private readonly INavigationService _navigationService = navigationService;
+    private readonly WinUIInitializeNavigationService _initializeNavigationService = initializeNavigationService;
 
     public void SetNavigationFrame(Frame frame) => _initializeNavigationService.Initialize(frame, _pages);
 

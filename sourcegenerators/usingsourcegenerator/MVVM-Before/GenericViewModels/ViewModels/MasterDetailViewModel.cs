@@ -16,10 +16,7 @@ public abstract class MasterDetailViewModel<TItemViewModel, TItem> : ViewModelBa
     {
         _itemsService = itemsService;
 
-        _itemsService.Items.CollectionChanged += (sender, e) =>
-        {
-            OnPropertyChanged(nameof(ItemsViewModels));
-        };
+        _itemsService.Items.CollectionChanged += (sender, e) => OnPropertyChanged(nameof(ItemsViewModels));
 
         RefreshCommand = new RelayCommand(OnRefresh);
         AddCommand = new RelayCommand(OnAdd);
@@ -54,7 +51,8 @@ public abstract class MasterDetailViewModel<TItemViewModel, TItem> : ViewModelBa
         get
         {
             var selectedItem = _itemsService.SelectedItem;
-            if (selectedItem is null) return default;
+            if (selectedItem is null) 
+                return default;
             return ToViewModel(selectedItem);
         }
 

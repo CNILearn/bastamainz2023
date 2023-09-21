@@ -2,21 +2,15 @@
 
 namespace BooksLib.Models;
 
-public partial class Book : ObservableObject
+public partial class Book(string? title = null, string? publisher = null, int id = 0) : ObservableObject
 {
-    public Book(string? title = null, string? publisher = null, int id = 0)
-    {
-        BookId = id;
-        _title = title ?? string.Empty;
-        _publisher = publisher ?? string.Empty;
-    }
-    public int BookId { get; set; }
+    public int BookId { get; set; } = id;
 
     [ObservableProperty]
-    private string _title;
+    private string _title = title ?? string.Empty;
 
     [ObservableProperty]
-    private string _publisher;
+    private string _publisher = publisher ?? string.Empty;
 
     public override string ToString() => Title;
 }

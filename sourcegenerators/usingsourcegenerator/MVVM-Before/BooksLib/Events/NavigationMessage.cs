@@ -6,8 +6,6 @@ public class NavigationInfo
 {
     public bool UseNavigation { get; set; }
 }
-public class NavigationMessage : ValueChangedMessage<NavigationInfo>
+public class NavigationMessage(NavigationInfo navigationInfo) : ValueChangedMessage<NavigationInfo>(navigationInfo)
 {
-    public NavigationMessage(NavigationInfo navigationInfo)
-        : base(navigationInfo) { }
 }

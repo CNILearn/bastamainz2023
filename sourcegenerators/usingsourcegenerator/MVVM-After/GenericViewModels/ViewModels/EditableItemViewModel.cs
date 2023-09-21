@@ -28,7 +28,6 @@ public abstract partial class EditableItemViewModel<TItem> : ItemViewModel<TItem
     [RelayCommand(CanExecute = nameof(IsReadMode))]
     private void Add() => OnAdd();
 
-
     [RelayCommand(CanExecute = nameof(IsReadMode))]
     private void Edit() => BeginEdit();
 
@@ -81,7 +80,8 @@ public abstract partial class EditableItemViewModel<TItem> : ItemViewModel<TItem
 
     public virtual void BeginEdit()
     {
-        if (Item is null) throw new InvalidOperationException("Item is null");
+        if (Item is null) 
+            throw new InvalidOperationException("Item is null");
 
         IsEditMode = true;
         TItem itemCopy = CreateCopy(Item);

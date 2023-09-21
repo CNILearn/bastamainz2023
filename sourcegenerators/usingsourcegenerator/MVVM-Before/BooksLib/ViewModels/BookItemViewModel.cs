@@ -23,7 +23,8 @@ public class BookItemViewModel : ItemViewModel<Book>
 
     private async void OnDeleteBook()
     {
-        if (Item is null) return;
+        if (Item is null) 
+            return;
 
         await _booksService.DeleteAsync(Item);
     }

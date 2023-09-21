@@ -42,10 +42,9 @@ public partial class App : Application
                 .AddSingleton<IDialogService, WinUIDialogService>()
                 .AddSingleton<INavigationService, WinUINavigationService>()
                 .AddSingleton<WinUIInitializeNavigationService>()
-                .AddLogging(builder =>
-                {
-                    builder.AddDebug();
-                }).BuildServiceProvider());
+                .AddLogging(builder => 
+                    builder.AddDebug())
+                .BuildServiceProvider());
     }
 
     private Window? _window;

@@ -8,19 +8,13 @@ using System.Collections.ObjectModel;
 
 namespace BooksLib.Services;
 
-public class BooksService : ObservableObject, IItemsService<Book>
+public class BooksService(IBooksRepository repository) : ObservableObject, IItemsService<Book>
 {
-    private readonly ObservableCollection<Book> _books = new();
-    private readonly IBooksRepository _booksRepository;
+    private readonly IBooksRepository _booksRepository = repository;
 
     public event EventHandler<Book>? SelectedItemChanged;
 
-    public BooksService(IBooksRepository repository)
-    {
-        _booksRepository = repository;
-    }
-
-    public ObservableCollection<Book> Items => _books;
+    public ObservableCollection<Book> Items { get; } = new();
 
     private Book? _selectedItem;
     public Book? SelectedItem
@@ -53,10 +47,10 @@ public class BooksService : ObservableObject, IItemsService<Book>
     public async Task RefreshAsync()
     {
         IEnumerable<Book> books = await _booksRepository.GetItemsAsync();
-        _books.Clear();
+        Items.Clear();
         foreach (var book in books)
         {
-            _books.Add(book);
+            Items.Add(book);
         }
         SelectedItem = Items.FirstOrDefault();
     }

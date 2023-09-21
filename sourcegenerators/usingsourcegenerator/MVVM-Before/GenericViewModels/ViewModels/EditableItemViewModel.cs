@@ -78,7 +78,8 @@ public abstract class EditableItemViewModel<TItem> : ItemViewModel<TItem>, IEdit
 
     public virtual void BeginEdit()
     {
-        if (Item is null) throw new InvalidOperationException("Item is null");
+        if (Item is null) 
+            throw new InvalidOperationException("Item is null");
 
         IsEditMode = true;
         TItem itemCopy = CreateCopy(Item);
