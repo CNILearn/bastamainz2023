@@ -2,22 +2,15 @@
 using System.Text.Json.Serialization;
 
 Book b = new("Professional C#", "Wiley", "3443");
-var json = JsonSerializer.Serialize(b, typeof(Book), BooksContext.Default);
+string json = JsonSerializer.Serialize(b, typeof(Book), BooksContext.Default);
 Console.WriteLine(json);
 
-
-public class Book
+public class Book(string title, string? publisher = default, string? isbn = default)
 {
-    public Book(string title, string? publisher = default, string? isbn = default)
-    {
-        Title = title;
-        Publisher = publisher;
-        _isbn = isbn ?? string.Empty;
-    }
-    public string _isbn = string.Empty;
-    public string Title { get; set; }
+    public string _isbn = isbn ?? string.Empty;
+    public string Title { get; set; } = title;
     [JsonPropertyName("vendor")]
-    public string? Publisher { get; set; }
+    public string? Publisher { get; set; } = publisher;
     public override string ToString()
     {
         return $"{Title}, {Publisher}, {_isbn}";

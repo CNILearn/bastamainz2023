@@ -2,14 +2,10 @@
 
 namespace LoggingSample;
 
-internal class Runner
+internal class Runner(ILogger<Runner> logger)
 {
-    private readonly ILogger _logger;
+    private readonly ILogger _logger = logger;
 
-    public Runner(ILogger<Runner> logger)
-    {
-        _logger = logger;
-    }
     public void Run()
     {
         _logger.GameStarted("a new game");

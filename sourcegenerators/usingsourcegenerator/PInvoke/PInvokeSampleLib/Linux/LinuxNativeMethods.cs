@@ -33,7 +33,6 @@ internal static partial class LinuxNativeMethods
         { EMLINK, "There are already too many links to the file named by oldname. (The maximum number of links to a file is LINK_MAX; see Section 32.6 [Limits on File System Capacity], page 904.)" }
     };
 
-
     [LibraryImport("libc", EntryPoint = "link", SetLastError = true, StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     private static partial int Link(string oldpath, string newpath);
