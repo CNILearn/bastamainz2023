@@ -1,0 +1,31 @@
+﻿@page "/calljavascript"
+
+@using System.Runtime.InteropServices.JavaScript
+
+<h3>Call JavaScript</h3>
+
+<input type="text" @bind-value="@x" />
+<br />
+<input type="text" @bind-value="@y" />
+<br />
+<button @onclick="Add">Add</button>
+<br />
+<button @onclick="Subtract">Subtract</button>
+<br />
+<div>Result: @result</div>
+
+@code {
+    private int x;
+    private int y;
+    private int result;
+
+    private void Add()
+    {
+        result = Interop.AddJS(x, y);
+    }
+
+    private void Subtract()
+    {
+        result = Interop.SubtractJS(x, y);
+    }
+}

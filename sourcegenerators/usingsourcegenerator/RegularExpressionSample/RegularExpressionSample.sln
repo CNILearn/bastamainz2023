@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33402.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressionSample", "RegularExpressionSample.csproj", "{EEEEE9F2-8A82-4895-96EF-65893D0BDA65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEEEE9F2-8A82-4895-96EF-65893D0BDA65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEEE9F2-8A82-4895-96EF-65893D0BDA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEEE9F2-8A82-4895-96EF-65893D0BDA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEEE9F2-8A82-4895-96EF-65893D0BDA65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A3E67A4-9F57-4CB2-A0A3-616016DEA76D}
+	EndGlobalSection
+EndGlobal
