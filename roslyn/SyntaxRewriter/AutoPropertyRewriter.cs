@@ -9,7 +9,6 @@ class AutoPropertyRewriter : CSharpSyntaxRewriter
 {
     private readonly SemanticModel _semanticModel;
 
-
     public AutoPropertyRewriter(SemanticModel semanticModel)
     {
         _semanticModel = semanticModel;
@@ -34,10 +33,12 @@ class AutoPropertyRewriter : CSharpSyntaxRewriter
         {
             AccessorDeclarationSyntax? accessorDeclaration = node.AccessorList?.Accessors.Single(
                 ad => ad.Kind() == SyntaxKind.GetAccessorDeclaration);
-            if (accessorDeclaration is null) return null;
+            if (accessorDeclaration is null) 
+                return null;
 
             IFieldSymbol? backingField = GetBackingFieldFromGetter(accessorDeclaration);
-            if (backingField is null) return null;
+            if (backingField is null) 
+                return null;
 
             SyntaxNode? fieldDeclaration = backingField.DeclaringSyntaxReferences
                 .First()
@@ -60,7 +61,8 @@ class AutoPropertyRewriter : CSharpSyntaxRewriter
     private static bool HasBothAccessors(BasePropertyDeclarationSyntax property)
     {
         var accessors = property.AccessorList?.Accessors;
-        if (accessors is null) return false;
+        if (accessors is null) 
+            return false;
         
         var getter = accessors?.FirstOrDefault(
             ad => ad.Kind() == SyntaxKind.GetAccessorDeclaration);
@@ -91,10 +93,12 @@ class AutoPropertyRewriter : CSharpSyntaxRewriter
 
     private IFieldSymbol? GetBackingFieldFromGetter(AccessorDeclarationSyntax getter)
     {
-        if (getter.Body?.Statements.Count != 1) return null;
+        if (getter.Body?.Statements.Count != 1) 
+            return null;
 
         var statement = getter.Body.Statements.Single() as ReturnStatementSyntax;
-        if (statement?.Expression == null) return null;
+        if (statement?.Expression == null) 
+            return null;
 
         return _semanticModel.GetSymbolInfo(statement.Expression).Symbol as IFieldSymbol;
     }

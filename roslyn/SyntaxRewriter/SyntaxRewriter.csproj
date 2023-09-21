@@ -19,7 +19,4 @@
   <ItemGroup>
     <Compile Remove="Sample.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
 </Project>

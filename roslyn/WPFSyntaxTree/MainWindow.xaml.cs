@@ -23,8 +23,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private async void OnLoad(object sender, RoutedEventArgs e)
     {
-        OpenFileDialog dlg = new();
-        dlg.Filter = "C# Code (.cs)|*.cs";
+        OpenFileDialog dlg = new()
+        {
+            Filter = "C# Code (.cs)|*.cs"
+        };
 
         if (dlg.ShowDialog() == true)
         {
@@ -36,7 +38,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             Nodes.Add(new SyntaxNodeViewModel(node));
         }
     }
-
 
     public event PropertyChangedEventHandler? PropertyChanged;
     public void OnPropertyChanged([CallerMemberName] string? propertyName = default)

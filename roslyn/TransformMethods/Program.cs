@@ -5,7 +5,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 string code = File.ReadAllText("Sample.cs");
 TransformMethodToUppercaseAsync(code).Wait();
 
-async Task TransformMethodToUppercaseAsync(string code)
+async static Task TransformMethodToUppercaseAsync(string code)
 {
     SyntaxTree tree = CSharpSyntaxTree.ParseText(code);
     SyntaxNode root = await tree.GetRootAsync();
