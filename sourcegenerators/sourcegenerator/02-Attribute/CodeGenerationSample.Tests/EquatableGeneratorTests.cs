@@ -6,7 +6,7 @@ public class EquatableGeneratorTests
     [Fact]
     public Task TestEquatableAttributeGenerated()
     {
-        var source = """
+        string source = """
             namespace Test.Sample;
 
             [CodeGenerationSample.ImplementEquatableAttribute()]

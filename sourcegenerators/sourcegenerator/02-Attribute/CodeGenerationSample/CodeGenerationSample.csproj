@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.6</Version>
+    <Version>2.0.1</Version>
     <PackageId>Basta.Equatable</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
@@ -14,8 +14,8 @@
   <PropertyGroup>
     <IncludeBuildOutput>false</IncludeBuildOutput> <!-- Do not include as a lib dependency -->
     <DevelopmentDependency>true</DevelopmentDependency>
-    <PackageProjectUrl>https://github.com/cnilearn/bastaspring2023</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/cnilearn/bastaspring2023</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/cnilearn/bastamainz2023</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cnilearn/bastamainz2023</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
