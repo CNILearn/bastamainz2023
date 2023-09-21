@@ -23,3 +23,39 @@ Dienstag, 26. September 2023, 17:00 - 18:00, Gutenbergsaal 1
 Christian Nagel
 
 Source Generators sind eine neue Möglichkeit, Code zu generieren. Der Code wird dabei schon während des Tippens im Editor erzeugt. Damit steht Intellisense auch gleich zur Verfügung. In dieser Session lernen Sie die Grundlagen der Incremental Source Generators, und wie Sie Source Generators, die bereits mit .NET mitgeliefert werden, in Ihren Applikationen verwenden können, darunter z. B. Logging, JSON Serialisierung, Regular Expressions, JavaScript Interop und mehr.
+
+[Slides - Creating Source Code with Source Generators](slides/SourceGenerators.pdf)
+
+### Samples
+
+#### Roslyn
+
+* [Syntax Query](roslyn/SyntaxQuery/)
+* [Syntax Walker](roslyn/SyntaxWalker/)
+* [Syntax Rewriter](roslyn/SyntaxRewriter/)
+* [Semantics Compilation](roslyn/SemanticsCompilation/)
+* [Refactoring](roslyn/PropertyCodeRefactoring/)
+* [WPF Syntax Tree](roslyn/WpfSyntaxTree/)
+
+#### Using Source Generators
+
+* [Regular Expressions](sourcegenerators/usingsourcegenerators/RegularExpressionSample/)
+* [PInvoke](sourcegenerators/usingsourcegenerators/PInvoke/)
+* [Logging](sourcegenerators/usingsourcegenerators/Logging/)
+* [JSON Serialization](sourcegenerators/usingsourcegenerators/JsonSerialization/)
+* [JavaScript Interop](sourcegenerators/usingsourcegenerators/BlazorWasmSample/)
+* [Native AOT](sourcegenerators/usingsourcegenerators/NativeAOT/)
+
+#### Creating Source Generators
+
+* [Hello World](sourcegenerators/sourcegenerator/01-hello/)
+* [Using attributes](sourcegenerators/sourcegenerator/02-Attribute/)
+* [Chaining generators](sourcegenerators/sourcegenerator/03-MoreGeneric/)
+
+[How to - creating a simple source generator](sourcegenerators/sourcegenerator/createsimplesourcegenerator.md)
+
+### Links
+
+* [Incremental Source Generators](https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md​)
+* [Source Generators](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.md​)
+* [Source Generator Cookbook](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md)
