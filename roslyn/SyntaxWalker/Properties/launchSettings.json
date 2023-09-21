@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SyntaxWalker": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\githublearn\\bastasource\\bastaspring2023\\roslyn\\SyntaxWalker\\"
+    }
+  }
+}
