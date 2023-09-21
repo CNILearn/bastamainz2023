@@ -6,7 +6,7 @@ public class HelloWorldGeneratorTests
     [Fact]
     public Task TestHelloWorldGenerated()
     {
-        var source = """
+        string source = """
             namespace Test;
             public class TestClass
             {

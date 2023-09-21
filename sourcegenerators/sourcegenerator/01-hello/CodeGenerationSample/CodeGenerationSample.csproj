@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <PackageId>Basta.Hello</PackageId>
-    <Version>1.0.6</Version>
+    <Version>2.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -15,7 +15,7 @@
     <IncludeBuildOutput>false</IncludeBuildOutput> <!-- Do not include as a lib dependency -->
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageProjectUrl>https://github.com/cnilearn/bastaspring2023</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/cnilearn/bastaspring2023</RepositoryUrl>
+    <RepositoryUrl>https://github.com/cnilearn/bastamainsz2023</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.4.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.7.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.7.0" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
