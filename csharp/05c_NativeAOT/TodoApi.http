@@ -1,0 +1,11 @@
+@TodoApi_HostAddress = http://localhost:5253
+
+GET {{TodoApi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{TodoApi_HostAddress}}/todos/1
+Accept: application/json
+
+###
