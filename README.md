@@ -16,6 +16,24 @@ Christian Nagel
 
 C# 11 ist released, C# 12 steht vor der Tür. Seit vielen C#-Versionen gibt es Erweiterungen beim Pattern Matching - so auch mit C# 11. Raw string literals, required members, abstrakte statische Members in Interfaces sind Features, die mit C# 11 verfügbar sind. Für C# 12 sind u. a. primary constructors, semi-auto properties und roles geplant. Diese Session bietet einen Überblick über die neuen Features und zeigt Ihnen, wie Sie diese in Ihren Projekten einsetzen können.
 
+[Slides](slides/CSharp11-12.pdf)
+
+### Samples
+
+* [UTF 8 and raw string literals](csharp/01-Strings/)
+* [Alias any type](csharp/02a-Alias/)
+* [Required modifier](csharp/02b-RequiredModifier/)
+* [Primary constructors](csharp/02c-PrimaryConstructors/)
+* [Static members in interfaces](csharp/03a-ParsableSample/)
+* [Static members in interfaces](csharp/03b-MathSample/)
+* [Collection literals](csharp/04a-CollectionLiterals/)
+* [List pattern matching](csharp/04b-ListPatternMatching/)
+* [List pattern matching](csharp/04c-ListPatterns/)
+* [Inline arrays](csharp/04d-InlineArrays/)
+* [Unsafe accessors](csharp/05a-UnsafeAccessors/)
+* [Interceptors](csharp/05b-Interceptors/)
+* [Native AOT](csharp/05c_NativeAOT/)
+
 ## Creating Source Code with Source Generators
 
 Dienstag, 26. September 2023, 17:00 - 18:00, Gutenbergsaal 1
