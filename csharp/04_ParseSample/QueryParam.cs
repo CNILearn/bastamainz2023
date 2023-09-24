@@ -2,6 +2,7 @@
 
 namespace ParseSample;
 
+// a generic type implementing the interface with static members
 public struct QueryParam<T>
     where T : ISpanParsable<T>
 {
