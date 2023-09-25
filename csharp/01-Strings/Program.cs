@@ -3,15 +3,22 @@ using System.Text;
 
 // UTF8 string literal
 
-// from .NET:
+// from .NET source code:
 //private static ReadOnlySpan<byte> CrLf => "\r\n"u8;
 //private static ReadOnlySpan<byte> ColonSpace => ": "u8;
 
+// use Span
 ReadOnlySpan<byte> mystring = "Bücher"u8;
-byte[] array = "my string"u8.ToArray();
-Console.WriteLine($"Length: {mystring.Length}");
 
-int x = 3;
+// or array
+byte[] array = "Bücher"u8.ToArray();
+Console.WriteLine($"Length: {mystring.Length}");
+Console.WriteLine($"Array length: {array.Length}");
+
+// a string
+string aString = "Bücher";
+char[] charArray = aString.ToArray();
+Console.WriteLine($"String length: {charArray.Length}, bytes: {charArray.Length * sizeof(char)}");
 
 Console.WriteLine(Encoding.UTF8.GetString(mystring));
 
