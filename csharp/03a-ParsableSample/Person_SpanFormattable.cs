@@ -25,14 +25,11 @@ public partial record class Person : ISpanFormattable
         }
     }
 
-    public override string ToString()
+    public override string ToString() => this switch
     {
-        return this switch
-        {
-            { MiddleName: null } => $"{FirstName} {LastName}",
-            _ => $"{FirstName} {MiddleName} {LastName}"
-        };
-    }
+        { MiddleName: null } => $"{FirstName} {LastName}",
+        _ => $"{FirstName} {MiddleName} {LastName}"
+    };
 
     public string ToString(string? format, IFormatProvider? formatProvider = default) => 
         format switch

@@ -4,8 +4,6 @@ namespace ParseSample;
 
 public partial record class Person : IParsable<Person>
 {
-
-    #region IParsable
     public static Person Parse(string s, IFormatProvider? provider = default)
     {
         if (!TryParse(s, provider, out Person? result))
@@ -26,6 +24,4 @@ public partial record class Person : IParsable<Person>
         };
         return result is not null;
     }
-    #endregion
-
 }

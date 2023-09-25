@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 
+// use + operator with custom generic types Point and Transformation
 Point<int> pt1 = new(4, 5);
 Transformation<int> tr1 = new(2, 3);
 Point<int> pt2 = pt1 + tr1;  // move the point by the translation

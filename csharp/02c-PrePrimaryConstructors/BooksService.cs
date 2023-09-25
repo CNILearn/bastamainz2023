@@ -18,7 +18,6 @@ public class BooksService
     }
 }
 
-
 public interface IBooksRepository
 {
     Task<IEnumerable<Book>> GetBooksAsync();
