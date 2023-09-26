@@ -1,3 +1,5 @@
+![Footer](./Hero.jpg)
+
 # BASTA! Mainz 2023
 
 ## Don't miss a Beat with C# 11 and 12
