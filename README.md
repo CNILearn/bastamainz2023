@@ -1,13 +1,5 @@
 # BASTA! Mainz 2023
 
-## HotChocolate: ein Heißgetränk oder ein GraphQL-Backend für .NET Entwicklerinnen
-
-Mittwoch, 27. September 2023, 16:45 - 17:45, Watfordsaal
-
-Sebastian Szvetecz
-
-Alle Liebhaber:innen von heißer Schokolade bzw. Kakao muss ich jetzt leider enttäuschen. HotChocolate ist in diesem Kontext kein Heißgetränk, sondern ein GraphQL-Backend für .NET-Entwickler:innen. GraphQL ist eine Abfragesprache für APIs, gilt als DER Gegner von REST und wird unter anderem vom Facebook, GitHub und Pinterest verwendet. In dieser Session werden wir noch genauer aufarbeiten, was GraphQL ist und warum GraphQL ein würdiger Gegner von REST ist. Außerdem werden wir uns ansehen wie einfach man mit ASP.NET Core und HotChocolate ein GraphQL API umsetzen kann. Unser GraphQL API soll nicht nur mit Hilfe von Entity Framework Core auf eine Datenkbank zugreifen, sie soll dem Client auch ermöglichen, Daten zu filtern, zu sortieren und zu paginieren, um einen möglichst flexiblen Datenzugriff zu ermöglichen. Filtern, Sortieren und Paginieren – klingt aufwendig? Nein, nicht mit HotChocolate . Aber auch für fortgeschrittenere Szenarien wie z. B. langsame Teilabfragen ist man mit HotChocolate gerüstet. Mehr dazu in dieser Session...
-
 ## Don't miss a Beat with C# 11 and 12
 
 Dienstag, 26. September 2023, 10:45 - 11:45, Gutenbergsaal 1
@@ -77,3 +69,11 @@ Source Generators sind eine neue Möglichkeit, Code zu generieren. Der Code wird
 * [Incremental Source Generators](https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md​)
 * [Source Generators](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.md​)
 * [Source Generator Cookbook](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md)
+
+## HotChocolate: ein Heißgetränk oder ein GraphQL-Backend für .NET Entwicklerinnen
+
+Mittwoch, 27. September 2023, 16:45 - 17:45, Watfordsaal
+
+Sebastian Szvetecz
+
+Alle Liebhaber:innen von heißer Schokolade bzw. Kakao muss ich jetzt leider enttäuschen. HotChocolate ist in diesem Kontext kein Heißgetränk, sondern ein GraphQL-Backend für .NET-Entwickler:innen. GraphQL ist eine Abfragesprache für APIs, gilt als DER Gegner von REST und wird unter anderem vom Facebook, GitHub und Pinterest verwendet. In dieser Session werden wir noch genauer aufarbeiten, was GraphQL ist und warum GraphQL ein würdiger Gegner von REST ist. Außerdem werden wir uns ansehen wie einfach man mit ASP.NET Core und HotChocolate ein GraphQL API umsetzen kann. Unser GraphQL API soll nicht nur mit Hilfe von Entity Framework Core auf eine Datenkbank zugreifen, sie soll dem Client auch ermöglichen, Daten zu filtern, zu sortieren und zu paginieren, um einen möglichst flexiblen Datenzugriff zu ermöglichen. Filtern, Sortieren und Paginieren – klingt aufwendig? Nein, nicht mit HotChocolate . Aber auch für fortgeschrittenere Szenarien wie z. B. langsame Teilabfragen ist man mit HotChocolate gerüstet. Mehr dazu in dieser Session...
