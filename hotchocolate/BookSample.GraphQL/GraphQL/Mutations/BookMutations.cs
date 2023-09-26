@@ -29,7 +29,7 @@ public class BookMutations
     }
 
     [UseMutationConvention(PayloadFieldName = "deletedBookId")]
-    public async Task<long> DeleteBookAsync([Service] IBookService bookService, [Argument] long bookId, CancellationToken cancellationToken)
+    public async Task<long> DeleteBookAsync([Service] IBookService bookService, [Argument][ID] long bookId, CancellationToken cancellationToken)
     {
         await bookService.DeleteBookAsync(bookId, cancellationToken);
         return bookId;

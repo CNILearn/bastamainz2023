@@ -15,6 +15,6 @@ public class BookQueries
 
     [UseFirstOrDefault]
     [UseProjection]
-    public IQueryable<Book> GetBookById(long id, [Service] IBookService bookService) =>
+    public IQueryable<Book> GetBookById([ID] long id, [Service] IBookService bookService) =>
         bookService.GetBookQueryable(id);
 }
