@@ -16,10 +16,6 @@ builder.Services.AddPooledDbContextFactory<BookDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetRequired("Postgres:ConnectionString"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTrackingWithIdentityResolution);
 });
-//builder.Services.AddDbContext<BookDbContext>(options =>
-//{
-
-//}, ServiceLifetime.Transient);
 
 builder.Services.AddTransient<IBookRepository, BookRepository>();
 builder.Services.AddTransient<IBookService, BookService>();
