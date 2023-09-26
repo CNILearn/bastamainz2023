@@ -70,10 +70,24 @@ Source Generators sind eine neue Möglichkeit, Code zu generieren. Der Code wird
 * [Source Generators](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.md​)
 * [Source Generator Cookbook](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md)
 
-## HotChocolate: ein Heißgetränk oder ein GraphQL-Backend für .NET Entwicklerinnen
+## HotChocolate: ein Heißgetränk oder ein GraphQL-Backend für .NET EntwicklerInnen
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 Mittwoch, 27. September 2023, 16:45 - 17:45, Watfordsaal
 
 Sebastian Szvetecz
 
 Alle Liebhaber:innen von heißer Schokolade bzw. Kakao muss ich jetzt leider enttäuschen. HotChocolate ist in diesem Kontext kein Heißgetränk, sondern ein GraphQL-Backend für .NET-Entwickler:innen. GraphQL ist eine Abfragesprache für APIs, gilt als DER Gegner von REST und wird unter anderem vom Facebook, GitHub und Pinterest verwendet. In dieser Session werden wir noch genauer aufarbeiten, was GraphQL ist und warum GraphQL ein würdiger Gegner von REST ist. Außerdem werden wir uns ansehen wie einfach man mit ASP.NET Core und HotChocolate ein GraphQL API umsetzen kann. Unser GraphQL API soll nicht nur mit Hilfe von Entity Framework Core auf eine Datenkbank zugreifen, sie soll dem Client auch ermöglichen, Daten zu filtern, zu sortieren und zu paginieren, um einen möglichst flexiblen Datenzugriff zu ermöglichen. Filtern, Sortieren und Paginieren – klingt aufwendig? Nein, nicht mit HotChocolate . Aber auch für fortgeschrittenere Szenarien wie z. B. langsame Teilabfragen ist man mit HotChocolate gerüstet. Mehr dazu in dieser Session...
+
+### Sample
+
+[Booksample](hotchocolate/)
+
+### Links
+
+* [GraphQL](https://graphql.org/)
+* [HotChocolate-Docs](https://chillicream.com/docs/hotchocolate/v13)
+* [HotChocolate-Github](https://github.com/ChilliCream/graphql-platform)
