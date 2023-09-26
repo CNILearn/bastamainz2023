@@ -5,15 +5,9 @@ using Microsoft.CodeAnalysis.Formatting;
 
 namespace SyntaxRewriter;
 
-class AutoPropertyRewriter : CSharpSyntaxRewriter
+class AutoPropertyRewriter(SemanticModel semanticModel) : CSharpSyntaxRewriter
 {
-    private readonly SemanticModel _semanticModel;
-
-    public AutoPropertyRewriter(SemanticModel semanticModel)
-    {
-        _semanticModel = semanticModel;
-    }
-
+    private readonly SemanticModel _semanticModel = semanticModel;
     private readonly List<string> _fieldsToRemove = new();
     public IEnumerable<string> FieldsToRemove => _fieldsToRemove;
 

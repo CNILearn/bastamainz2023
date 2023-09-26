@@ -10,16 +10,10 @@ public enum TriviaKind
     Annotated
 }
 
-public class SyntaxTriviaViewModel
+public class SyntaxTriviaViewModel(TriviaKind kind, SyntaxTrivia syntaxTrivia)
 {
-    public SyntaxTriviaViewModel(TriviaKind kind, SyntaxTrivia syntaxTrivia)
-    {
-        TriviaKind = kind;
-        SyntaxTrivia = syntaxTrivia;
-    }
-
-    public SyntaxTrivia SyntaxTrivia { get; }
-    public TriviaKind TriviaKind { get; }
+    public SyntaxTrivia SyntaxTrivia { get; } = syntaxTrivia;
+    public TriviaKind TriviaKind { get; } = kind;
 
     public override string ToString() => $"{TriviaKind}, Start: {SyntaxTrivia.Span.Start}, Length: {SyntaxTrivia.Span.Length} : {SyntaxTrivia}";
 

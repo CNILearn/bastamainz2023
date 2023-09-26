@@ -2,13 +2,9 @@
 
 namespace WPFSyntaxTree.ViewModels;
 
-public class SyntaxNodeViewModel
+public class SyntaxNodeViewModel(SyntaxNode syntaxNode)
 {
-    public SyntaxNodeViewModel(SyntaxNode syntaxNode)
-    {
-        SyntaxNode = syntaxNode; 
-    }
-    public SyntaxNode SyntaxNode { get; }
+    public SyntaxNode SyntaxNode { get; } = syntaxNode;
 
     public IEnumerable<SyntaxNodeViewModel> Children => SyntaxNode.ChildNodes()
         .Select(n => new SyntaxNodeViewModel(n));
