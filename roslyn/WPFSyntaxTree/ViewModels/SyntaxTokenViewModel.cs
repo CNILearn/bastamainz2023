@@ -2,14 +2,9 @@
 
 namespace WPFSyntaxTree.ViewModels;
 
-public class SyntaxTokenViewModel
+public class SyntaxTokenViewModel(SyntaxToken syntaxToken)
 {
-    public SyntaxTokenViewModel(SyntaxToken syntaxToken)
-    {
-        SyntaxToken = syntaxToken;
-    }
-
-    public SyntaxToken SyntaxToken { get; }
+    public SyntaxToken SyntaxToken { get; } = syntaxToken;
 
     public string TypeName => SyntaxToken.GetType().Name;
 

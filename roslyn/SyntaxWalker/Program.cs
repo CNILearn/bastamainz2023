@@ -36,7 +36,7 @@ class Program
         UsingCollector collector = new();
 
         IEnumerable<string> fileNames = Directory.EnumerateFiles(path, searchPattern, SearchOption.AllDirectories).Where(fileName => !fileName.EndsWith(".g.i.cs") && !fileName.EndsWith(".g.cs"));
-        foreach (var fileName in fileNames)
+        foreach (string fileName in fileNames)
         {
             string code = File.ReadAllText(fileName);
             SyntaxTree tree = CSharpSyntaxTree.ParseText(code);
@@ -55,7 +55,7 @@ class Program
             .Distinct()
             .Except(usingStatics)
             .OrderBy(u => u[..^1]);
-        foreach (var item in orderedUsings.Union(usingStatics))
+        foreach (string item in orderedUsings.Union(usingStatics))
         {
             WriteLine(item);
         }
